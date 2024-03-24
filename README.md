@@ -6,7 +6,7 @@ This repository contains API tests for the Swagger Petstore Sample, utilizing Cy
 
 # How to run the tests
 ## Prerequisites
-You'll need to follow the instructions in this repo [Swagger Petstore Repo](hhttps://github.com/swagger-api/swagger-petstore) to run the Swagger Petstore Sample locally.
+You'll need to follow the instructions in this repo [Swagger Petstore Repo](https://github.com/swagger-api/swagger-petstore) to run the Swagger Petstore Sample locally.
 
 ## Running the API tests (Cypress)
 
