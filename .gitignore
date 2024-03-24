@@ -9,5 +9,8 @@ cypress/videos/
 # mocha reports
 mochawesome-report
 
+# K6 reports
+summary.html
+
 #others
 .DS_Store
