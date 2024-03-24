@@ -23,9 +23,11 @@ If you want to check the mochawesome reports, please follow these steps:
 
 After runs it, you can view the file `full_report.html` in the `/mochawesome-report` folder.
 
+![Screenshot 2024-03-24 at 20 41 25](https://github.com/Maubh/qat-api-challenge/assets/5679998/ddefcb51-63d7-430b-a52d-395a0c8ea341)
+
 ## Running the API performance tests (K6)
 1. run `k6 run index.js` to run the K6 tests
-2. It will be generated a file called summary.html with the results of the tests.
+2. It will generate a file called summary.html with the results of the tests.
 
 ## References
 
