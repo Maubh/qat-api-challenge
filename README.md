@@ -21,11 +21,11 @@ In my case, I used Docker to run the Pet Store API locally.
 
 If you want to check the mochawesome reports, please follow these steps:
 1. run `npm run cy:run` to run the tests in headless mode
-2. run `npm run report:merge` to copy the test execution information to a json file
-3. run `npm run report:mocha` to generate a html report
+2. run `npm run report:merge` to copy the test execution information to a JSON file
+3. run `npm run report:mocha` to generate a HTML report
 4. run `npm run report:clean` to remove the report generated
 
-After runs it, you can view the file `full_report.html` in the `/mochawesome-report` folder (this folder will be shown only after you run the `npm run report:run` command).
+After running it, you can view the file `full_report.html` in the `/mochawesome-report` folder (this folder will be shown only after you run the `npm run report:run` command).
 
 ![Screenshot 2024-03-24 at 20 41 25](https://github.com/Maubh/qat-api-challenge/assets/5679998/ddefcb51-63d7-430b-a52d-395a0c8ea341)
 
@@ -33,6 +33,8 @@ After runs it, you can view the file `full_report.html` in the `/mochawesome-rep
 1. Go to the [K6](https://github.com/Maubh/qat-api-challenge/tree/main/k6) folder
 2. run `k6 run index.js` to run the K6 tests
 3. It will generate a file called summary.html with the results of the tests.
+
+![4190](https://github.com/Maubh/qat-api-challenge/assets/5679998/b226ee07-e1eb-4514-8887-4242998cfa11)
 
 ## References
 
