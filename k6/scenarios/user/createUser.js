@@ -8,7 +8,7 @@ import { randomIntBetween } from 'https://jslib.k6.io/k6-utils/1.1.0/index.js';
 export default function () {
     const username = `User-${randomString(10)}`;
     const email = `${username}@test.com`;
-    let response = http.post('http://localhost:8080/api/v3/user', JSON.stringify({
+    let response = http.post('https://petstore3.swagger.io/api/v3/user', JSON.stringify({
         id: randomIntBetween(1, 100),
         username: username,
         firstName: 'Alberto',

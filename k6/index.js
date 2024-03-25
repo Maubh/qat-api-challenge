@@ -6,38 +6,37 @@ import { group, sleep } from "k6";
 
 export const options = {
     scenarios:{
-        // pet: {
-        //     executor: 'ramping-vus',
-        //     exec: 'pet',
-        //     stages: [
-        //         { duration: '30s', target: 20 },
-        //         { duration: '1m', target: 20 },
-        //         { duration: '30s', target: 0 },
-        //     ],
+        pet: {
+            executor: 'ramping-vus',
+            exec: 'pet',
+            stages: [
+                { duration: '30s', target: 20 }, // Ramp up to 20 users over 30 seconds
+                { duration: '1m', target: 20 },  // Stay at 20 users for 1 minute
+                { duration: '30s', target: 0 },  // Ramp down to 0 users over 30 seconds
+            ],
 
-        // },
+        },
 
-        // store: {
-        //     executor: 'ramping-vus',
-        //     exec: 'store',
-        //     stages: [
-        //         { duration: '20s', target: 10 },
-        //         { duration: '40s', target: 10 },
-        //         { duration: '20s', target: 0 },
-        //     ],
+        store: {
 
-        // },
+            executor: 'ramping-vus',
+            exec: 'store',
+            stages: [
+                { duration: '20s', target: 10 }, // Ramp up to 10 users over 20 seconds
+                { duration: '40s', target: 10 }, // Hold at 10 users for 40 seconds
+                { duration: '20s', target: 0 },  // Ramp down to 0 users over 20 seconds
+            ],
+
+        },
 
         user: {
-            executor: 'constant-vus',
+            executor: 'ramping-vus',
             exec: 'user',
-            vus: 5,
-            duration: '30s'
-            // stages: [
-            //     { duration: '30s', target: 4 },
-            //     { duration: '30s', target: 4 },
-            //     { duration: '30s', target: 0 },
-            // ],
+            stages: [
+               { duration: '1m', target: 50 }, // Ramp up to 50 users over 1 minute
+               { duration: '2m', target: 50 }, // Stay at 50 users for 2 minutes
+               { duration: '1m', target: 0 },  // Ramp down to 0 users over 1 minute
+            ],
 
         },
 
@@ -54,21 +53,21 @@ export function handleSummary(data) {
     };
 }
 
-// export function pet() {
-//     group("Pet Endpoint - Create Pet API", () => {
-//         createPet();
-//     })
+export function pet() {
+    group("Pet Endpoint - Create Pet API", () => {
+        createPet();
+    })
 
-//     sleep(1);
-// }
+    sleep(1);
+}
 
-// export function store() {
-//     group("Store Endpoint - Place an order for a pet API", () => {
-//         placeOrder();
-//     })
+export function store() {
+    group("Store Endpoint - Place an order for a pet API", () => {
+        placeOrder();
+    })
 
-//     sleep(1);
-// }
+    sleep(1);
+}
 
 export function user() {
     group("User Endpoint - Create User API", () => {

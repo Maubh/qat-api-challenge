@@ -27,7 +27,7 @@ export default function () {
         'Content-Type': 'application/json',
     };
 
-    let res = http.post('http://localhost:8080/api/v3/pet', payload, { headers });
+    let res = http.post('https://petstore3.swagger.io/api/v3/pet', payload, { headers });
     check(res, { 'is status 200': (r) => r.status === 200 });
     sleep(1);
 }

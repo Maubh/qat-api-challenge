@@ -1,4 +1,4 @@
-<h1 align="center">#  QAT - Challlenge - API Pet Store</h1>
+<h1 align="center">#  QAT - Challenge - API Pet Store</h1>
 
 ![License Badge](https://img.shields.io/badge/license-MIT-brightgreen)
 

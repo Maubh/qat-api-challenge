@@ -33,6 +33,18 @@ describe('User API', (user) => {
         
         
     });
+
+    it('should logout', () => {
+
+        // Logout
+        cy.api_logoutUser()
+        .then(response => {
+            expect(response.status).to.equal(200)
+        })
+        
+        
+    });
+    
     it('should create a new user', () => {
 
         // User data
