@@ -27,7 +27,7 @@ If you want to check the mochawesome reports, please follow these steps:
 
 After running it, you can view the file `full_report.html` in the `/mochawesome-report` folder (this folder will be shown only after you run the `npm run report:run` command).
 
-![Screenshot 2024-03-24 at 20 41 25](https://github.com/Maubh/qat-api-challenge/assets/5679998/ddefcb51-63d7-430b-a52d-395a0c8ea341)
+![Screenshot 2024-03-25 at 00 18 56](https://github.com/Maubh/qat-api-challenge/assets/5679998/39076ddb-5f78-41e7-a23b-52f845042bc8)
 
 ## Running the API performance tests (K6)
 1. Go to the [K6](https://github.com/Maubh/qat-api-challenge/tree/main/k6) folder
